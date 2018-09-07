@@ -44,6 +44,8 @@ const Item = styled.div`
   margin: 10px;
 `;
 
+// Different versions:
+
 const Exponential = pure(({ number }) => (
   <Item>{number * number}</Item>
 ));
