@@ -21,7 +21,7 @@ class App extends Component {
         </Button>
 
         <Perspective perspective={this.state.perspective}>
-          {list.map(v => <Exponential key={v} number={v} />)}
+          {list.map(v => <Square key={v} number={v} />)}
         </Perspective>
       </div>
     );
@@ -47,19 +47,17 @@ const Item = styled.div`
 // Different versions:
 
 // FAST, no re-render, shallow shouldComponentUpdate check
-const Exponential = pure(({ number }) => (
-  <Item>{number * number}</Item>
-));
+const Square = pure(({ number }) => <Item>{number * number}</Item>);
 
 // FAST, no re-render, shallow shouldComponentUpdate check
-// class Exponential extends PureComponent {
+// class Square extends PureComponent {
 //   render() {
 //     return <Item>{this.props.number * this.props.number}</Item>;
 //   }
 // }
 
 // FAST, no re-render, fine-granular shouldComponentUpdate check
-// class Exponential extends Component {
+// class Square extends Component {
 //   shouldComponentUpdate(nextProps, nextState) {
 //     if (this.props.number === nextProps.number) {
 //       return false;
@@ -74,13 +72,13 @@ const Exponential = pure(({ number }) => (
 // }
 
 // SLOW
-// class Exponential extends Component {
+// class Square extends Component {
 //   render() {
 //     return <Item>{this.props.number * this.props.number}</Item>;
 //   }
 // }
 
 // SLOW
-// const Exponential = ({ number }) => <Item>{number * number}</Item>;
+// const Square = ({ number }) => <Item>{number * number}</Item>;
 
 export default App;
