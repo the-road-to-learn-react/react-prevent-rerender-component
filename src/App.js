@@ -2,6 +2,8 @@ import React, { Component, PureComponent } from 'react';
 import styled from 'styled-components';
 import { pure } from 'recompose';
 
+const list = new Array(5000).fill(0);
+
 class App extends Component {
   state = {
     perspective: false,
@@ -19,9 +21,7 @@ class App extends Component {
         </Button>
 
         <Perspective perspective={this.state.perspective}>
-          {new Array(5000)
-            .fill(0)
-            .map((v, i) => <Exponential key={i} number={i} />)}
+          {list.map((v, i) => <Exponential key={i} number={i} />)}
         </Perspective>
       </div>
     );
@@ -46,6 +46,7 @@ const Item = styled.div`
 
 // Different versions:
 
+// FAST, no re-render, shallow shouldComponentUpdate check
 const Exponential = pure(({ number }) => (
   <Item>{number * number}</Item>
 ));
