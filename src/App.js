@@ -2,7 +2,7 @@ import React, { Component, PureComponent } from 'react';
 import styled from 'styled-components';
 import { pure } from 'recompose';
 
-const list = new Array(5000).fill(0);
+const list = new Array(5000).fill(0).map((v, i) => i);
 
 class App extends Component {
   state = {
@@ -21,7 +21,7 @@ class App extends Component {
         </Button>
 
         <Perspective perspective={this.state.perspective}>
-          {list.map((v, i) => <Exponential key={i} number={i} />)}
+          {list.map(v => <Exponential key={v} number={v} />)}
         </Perspective>
       </div>
     );
