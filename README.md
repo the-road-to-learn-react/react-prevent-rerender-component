@@ -1,6 +1,6 @@
 # react-prevent-rerender-component
 
-[![Build Status](https://travis-ci.org/the-road-to-learn-react/react-prevent-rerender-component.svg?branch=master)](https://travis-ci.org/the-road-to-learn-react/react-prevent-rerender-component) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
+[![Build Status](https://travis-ci.org/the-road-to-learn-react/react-prevent-rerender-component.svg?branch=master)](https://travis-ci.org/the-road-to-learn-react/react-prevent-rerender-component) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/the-road-to-learn-react/react-prevent-rerender-component.svg)](https://greenkeeper.io/)
 
 An application showcasing how to prevent a rerender of a React component with shouldComponentUpdate or PureComponent in React. It is used for performance optimizations in update lifecycles (e.g. render). [Read more about it](https://www.robinwieruch.de/react-prevent-rerender-component).
 
